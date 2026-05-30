@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Contas — Demo</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <nav class="navbar"><div class="container nav-container"><a href="/index.html" class="logo"><span class="logo-em">EM</span> <span class="logo-text">Soluções Digitais</span></a></div></nav>
+  <header class="hero" style="padding:120px 0 40px;">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1>Controle de Contas</h1>
+        <p>Site para anotar suas contas, organizar vencimentos e controlar suas finanças simples e intuitivamente.</p>
+        <a href="/" class="btn btn-outline">Voltar ao site</a>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card glass">
+          <div class="hero-card-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <div style="padding:8px 0">
+            <h3 style="margin-bottom:8px">Registrar nova conta</h3>
+            <p style="color:var(--text-muted)">Adicione despesas, marque como paga e acompanhe o saldo mensal.</p>
+            <a href="#preview" class="btn btn-primary" style="margin-top:12px">Ver Preview</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container" style="padding:40px 24px">
+    <section class="section-header"><h2>Preview do sistema</h2><p class="section-tag">Visão geral</p></section>
+    <div class="demo-screenshot demo-video" id="preview" style="position:relative;margin-top:20px">
+      <video controls preload="metadata">
+        <source src="../assets/video/controle-total.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+      <div class="label">Controle de Contas — Vídeo de apresentação</div>
+    </div>
+  </main>
+  <footer class="footer" style="margin-top:40px;padding:24px 0"><div class="container">© Demo — Controle de Contas</div></footer>
+</body>
+</html>
