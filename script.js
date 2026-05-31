@@ -33,15 +33,31 @@ document.querySelectorAll('.service-card, .plan-card, .portfolio-card, .diff-ite
   .forEach(el => { el.classList.add('fade-in'); observer.observe(el); });
 
 // ===== CONTACT FORM =====
-document.getElementById('contactForm').addEventListener('submit', function (e) {
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
   const name = this.querySelector('input[type="text"]').value;
   const email = this.querySelector('input[type="email"]').value;
   const service = this.querySelector('select').value;
   const message = this.querySelector('textarea').value;
 
+  // Salvar no Supabase (se configurado)
+  if (typeof saveContactMessage === 'function') {
+    const result = await saveContactMessage({
+      name,
+      email,
+      service,
+      message
+    });
+    
+    if (!result.success && !result.local) {
+      console.error('Erro ao salvar mensagem:', result.error);
+      alert('Erro ao enviar. Tente novamente.');
+      return;
+    }
+  }
+
   const text = `Olá! Vim pelo site.\n\nNome: ${name}\nE-mail: ${email}\nServiço: ${service || 'Não informado'}\nMensagem: ${message}`;
-  const url = `https://wa.me/5500000000000?text=${encodeURIComponent(text)}`;
+  const url = `https://wa.me/5521985370136?text=${encodeURIComponent(text)}`;
   window.open(url, '_blank');
   this.reset();
 });

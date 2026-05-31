@@ -1,0 +1,16 @@
+{
+  "name": "em-solucoes-digitais",
+  "version": "1.0.0",
+  "description": "EM Soluções Digitais - Sites profissionais, automações, chatbots e sistemas",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "python -m http.server 3000"
+  },
+  "keywords": ["sites", "automação", "chatbot", "landing page"],
+  "author": "EM Soluções Digitais",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0"
+  }
+}
